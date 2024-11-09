@@ -1,8 +1,26 @@
 html(lang="ru")
     head
         meta(charset="utf-8")
-        title= "Учимся работать с шаблонизатором Pug"
+        title= "pug localhost"
+        link(rel="stylesheet" href="./reset.css")
         link(rel="stylesheet" href="./index.css")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet")
     body
-    div(class="wrapper")
-        h1 Hello, World!
+        header.header
+
+            div.wrapper
+                nav.nav
+                    div.nav-logo
+                        a(href= "/")
+                            img(src="./assets/menu.png" alt="logo" ).nav-logo__img
+                            h1.nav-logo__title clayton
+                    ul.nav-items
+                        each name in ["main", "about", "contacts"] 
+                            li(class="nav__item")
+                                a(href= "/" + name )= name
+        main.content 
+            div.wrapper
+                h2 content 
+
