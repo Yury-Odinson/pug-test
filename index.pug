@@ -14,13 +14,29 @@ html(lang="ru")
                 nav.nav
                     div.nav-logo
                         a(href= "/")
-                            img(src="./assets/menu.png" alt="logo" ).nav-logo__img
+                            img(src="./assets/menu.png" alt="logo").nav-logo__img 
                             h1.nav-logo__title clayton
                     ul.nav-items
                         each name in ["main", "about", "contacts"] 
                             li(class="nav__item")
                                 a(href= "/" + name )= name
-        main.content 
-            div.wrapper
-                h2 content 
+        main
+            div(id="root") 
 
+                div.wrapper
+                    h2 content
+                    section.news-container
+                        article.news__item
+                            h3.news__title Заголовок
+                            div.news-content
+                                img(src="./assets/image1.png" alt="image1").news__img
+                                p.news__description 
+                                    | Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    | Doloremque iusto excepturi necessitatibus qui explicabo consectetur molestiae quam nihil quia,
+                                    | molestias modi consequatur similique sed quis laboriosam quod quibusdam atque recusandae!
+                                    | Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    | Doloremque iusto excepturi necessitatibus qui explicabo consectetur molestiae quam nihil quia,
+                                    | molestias modi consequatur similique sed quis laboriosam quod quibusdam atque recusandae!
+
+    script(src="https://code.jquery.com/jquery-3.6.0.min.js")
+    script(src="./index.js" type="module")
